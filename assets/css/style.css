@@ -2,7 +2,7 @@
 :root {
     --main-color: #00ACBF;
     --white-color: #fff;
-    --black-color: #000;
+    --black-color: #141318;
     --title-font: 'Moon Dance', cursive;
     --body-font: 'Moulpali', cursive;
     --main-font-size: 18px;
@@ -16,6 +16,7 @@ body {
     font-family: var(--body-font);
     font-size: var(--main-font-size);
     color: var(--main-color);
+    background: var(--black-color);
 }
 
 h1, h2 {
@@ -67,4 +68,51 @@ header .header-cta a {
     border: 2px solid var(--main-color);
     padding: 20px;
     border-radius: 12px;
+}
+
+/*** FOOTER ***/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    height: 370px;
+}
+
+footer .footer-group {
+    display: flex;
+    width: 100%;
+    height: 325px;
+    justify-content: space-around;
+}
+
+footer #map {
+    height: 325px;
+    width: 30%;
+}
+
+footer .footer-infos {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid var(--main-color);
+    border-left: 1px solid var(--main-color);
+    color: var(--white-color);
+}
+
+footer .footer-social {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer-social .icones {
+    font-size: var(--logo-font-size);
+    padding: 1rem;
+}
+
+footer .copyright {
+    height: 25px;
+    text-align: center;
 }
