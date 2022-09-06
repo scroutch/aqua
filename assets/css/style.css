@@ -1,11 +1,70 @@
+/*** VARIABLES ***/
+:root {
+    --main-color: #00ACBF;
+    --white-color: #fff;
+    --black-color: #000;
+    --title-font: 'Moon Dance', cursive;
+    --body-font: 'Moulpali', cursive;
+    --main-font-size: 18px;
+    --btn-font-size: 20px;
+    --title-font-size: 48px;
+    --logo-font-size: 64px;
+}
+
+/*** GENERICS ***/
+body {
+    font-family: var(--body-font);
+    font-size: var(--main-font-size);
+    color: var(--main-color);
+}
+
+h1, h2 {
+    font-family: var(--title-font);
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
 /*** HEADER ***/
 
 header {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: space-between;
     background: url("../img/background-accueil.jpg");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+header nav {
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--title-font-size);
+}
+
+header nav h1 {
+    text-transform: uppercase;
+}
+
+header .header-cta {
+    width: 26%;
+    margin: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .header-cta p {
+    font-size: var(--logo-font-size);
+}
+
+header .header-cta a {
+    font-size: var(--btn-font-size);
+    text-transform: uppercase;
+    border: 2px solid var(--main-color);
+    padding: 20px;
+    border-radius: 12px;
 }
