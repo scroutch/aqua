@@ -1,0 +1,13 @@
+/*** HEADER ***/
+
+header {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    background: url("../img/background-accueil.jpg");
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+}
