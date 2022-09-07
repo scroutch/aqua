@@ -5,6 +5,6 @@
     </nav>
     <div class="header-cta">
         <p>"Venez goûter nos produits de la mer"</p>
-        <a href="#">nous découvrir</a>
+        <a href="#" class="button">nous découvrir</a>
     </div>
 </header>

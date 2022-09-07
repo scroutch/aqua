@@ -24,30 +24,25 @@ include('bdd.php');
 </head>
 
 <body>
-    <header>
-        <nav>
-            <h1>Aqua</h1>
-            <i class="fa-solid fa-bars"></i>
-        </nav>
-        <div class="header-cta">
-            <p>"Venez goûter nos produits de la mer"</p>
-            <a href="#">nous découvrir</a>
-        </div>
-    </header>
     <?php
 
     if (isset($_GET['page'])) {
         $page = $_GET['page'];
         if ($page == 1) {
+            include('./header.php');
             include('./home.php');
         } else if ($page == 2) {
+            include('./header2.php');
             include('');
         } else if ($page == 3) {
+            include('./header2.php');
             include('');
         } else if ($page == 4) {
+            include('./header2.php');
             include('');
         } 
     } else {
+        include('./header.php');
         include('./home.php');
     }
 
