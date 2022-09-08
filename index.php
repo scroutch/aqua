@@ -78,6 +78,7 @@ include('bdd.php');
     integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
     crossorigin=""></script>
     <script src="./js/app.js"></script>
+    <script src="./js/menuBurger.js"></script>
 </body>
 
 </html>

@@ -54,12 +54,104 @@ header {
 header nav {
     padding: 3rem 5rem;
     display: flex;
+    width: 100%;
     justify-content: space-between;
     font-size: var(--title-font-size);
 }
 
 header nav h1 {
     text-transform: uppercase;
+}
+
+header nav #menuBurger {
+    cursor: pointer;
+	height: 27px;
+	width: 27px;
+	margin: 50px;
+	overflow: visible;
+	position: relative;
+	z-index: 2;
+}
+
+header nav #menuBurger span,
+header nav #menuBurger span:before,
+header nav #menuBurger span:after {
+    background: #fff;
+    display: block;
+    height: 2px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+}
+
+header nav #menuBurger span:before,
+header nav #menuBurger span:after {
+    content: '';
+}
+
+header nav #menuBurger span:before {
+    left: 0px;
+    top: -10px;
+    width: 27px;
+}
+
+header nav #menuBurger span {
+    right: 0px;
+    top: 13px;
+    width: 27px;
+}
+
+header nav #menuBurger span:after {
+    left: 0px;
+    top: 10px;
+    width: 27px;
+}
+
+header nav #menuBurger .close span:before {
+    top: 0px;
+    transform: rotate(90deg);
+    width: 27px;
+}
+
+header nav #menuBurger .close span {
+    transform: rotate(-45deg);
+    top: 13px;
+    width: 27px;
+}
+
+header nav #menuBurger .close span:after {
+    top: 0px;
+    left: 0;
+    transform: rotate(90deg);
+    opacity: 0;
+    width: 0;
+}
+
+header nav #menuBurger li {
+    list-style-type: none;
+    color: var(--black-color);
+    font-size: var(--secondary-font-size);
+}
+
+#menu {
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    padding-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+#menu .overlay {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 100px;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 header .header-cta {
