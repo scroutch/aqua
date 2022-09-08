@@ -33,12 +33,14 @@
 </div>
 <div id="menuCards">
     <div class="entrees">
-        <div class="card">
+        <div class="card d-flex align-items-center">
             <img src="./assets/img/stjacque.jpg" class="card-img-top" alt="saint jacques">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title text-center">Nos entrées</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="text-end">
+                    <a href="#" class="card-link">En savoir plus</a>
+                </div>
             </div>
         </div>
     </div>
@@ -46,20 +48,34 @@
         <div class="card">
             <img src="./assets/img/moule.jpg" class="card-img-top" alt="moules">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title text-center">Nos plats</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="text-end">
+                    <a href="#" class="card-link">En savoir plus</a>
+                </div>
             </div>
         </div>
     </div>
     <div class="desserts">
-        <div class="card">
+        <div class="card flex-column">
             <img src="./assets/img/glace.jpg" class="card-img-top" alt="glaces">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title text-center">Nos desserts</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="text-end">
+                    <a href="#" class="card-link">En savoir plus</a>
+                </div>
             </div>
+        </div>
+    </div>
+</div>
+<div id="reservation">
+    <div class="reservation-text">
+        <h3>Viens et rejoins nous !</h3>
+        <p class="text-maj">pense à faire ta réservation</p>
+        <p>Nous vous accueillons, que ce soit pour le déjeuner ou le dîner dans un lieu parfait pour déguster des spécialités italiennes telles que de délicieuses pâtes fraîches, des excellentes pizzas, le tout accompagné de vins italiens exquis.</p>
+        <div class="link">
+            <a href="#">reserver</a>
         </div>
     </div>
 </div>
