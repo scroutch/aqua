@@ -1,11 +1,11 @@
 /*** VARIABLES ***/
 :root {
-    --main-color: #00ACBF;
+    --main-color: #00acbf;
     --white-color: #fff;
     --black-color: #000002;
     --grey-color: #45424b;
-    --title-font: 'Moon Dance', cursive;
-    --body-font: 'Moulpali', cursive;
+    --title-font: "Moon Dance", cursive;
+    --body-font: "Moulpali", cursive;
     --main-font-size: 18px;
     --btn-font-size: 20px;
     --title-font-size: 48px;
@@ -23,13 +23,18 @@ body {
     background-color: var(--black-color);
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: var(--title-font);
 }
 
 a {
     text-decoration: none;
     color: var(--main-color);
+}
+
+a:hover {
+    color: var(--white-color);
 }
 
 .button {
@@ -42,10 +47,11 @@ a {
 
 /*** HEADER ***/
 
-header {
+#header {
     width: 100vw;
     height: 1250px;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)) ,url("../img/background-accueil.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("../img/background-accueil.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -63,95 +69,149 @@ header nav h1 {
     text-transform: uppercase;
 }
 
-header nav #menuBurger {
-    cursor: pointer;
-	height: 27px;
-	width: 27px;
-	margin: 50px;
-	overflow: visible;
-	position: relative;
-	z-index: 2;
+header nav button {
+    outline: none;
 }
 
-header nav #menuBurger span,
-header nav #menuBurger span:before,
-header nav #menuBurger span:after {
-    background: #fff;
-    display: block;
-    height: 2px;
-    opacity: 1;
-    position: absolute;
-    transition: 0.3s ease-in-out;
+.menulink {
+    font-family: var(--body-font);
+    padding-top: 25px;
+    font-size: 14px;
+    color: var(--main-color);
 }
 
-header nav #menuBurger span:before,
-header nav #menuBurger span:after {
-    content: '';
-}
-
-header nav #menuBurger span:before {
-    left: 0px;
-    top: -10px;
-    width: 27px;
-}
-
-header nav #menuBurger span {
-    right: 0px;
-    top: 13px;
-    width: 27px;
-}
-
-header nav #menuBurger span:after {
-    left: 0px;
-    top: 10px;
-    width: 27px;
-}
-
-header nav #menuBurger .close span:before {
-    top: 0px;
-    transform: rotate(90deg);
-    width: 27px;
-}
-
-header nav #menuBurger .close span {
-    transform: rotate(-45deg);
-    top: 13px;
-    width: 27px;
-}
-
-header nav #menuBurger .close span:after {
-    top: 0px;
-    left: 0;
-    transform: rotate(90deg);
-    opacity: 0;
-    width: 0;
-}
-
-header nav #menuBurger li {
-    list-style-type: none;
-    color: var(--black-color);
-    font-size: var(--secondary-font-size);
-}
-
-#menu {
-    z-index: 1;
-    min-width: 100%;
-    min-height: 100%;
+.menu-right {
+    width: 90%;
     position: fixed;
-    top: 0;
-    height: 0;
+    float: left;
     visibility: hidden;
-    opacity: 0;
-    text-align: center;
-    padding-top: 20px;
-    transition: all 0.3s ease-in-out;
+    margin-left: 50px;
+    transition: 0.6s;
+    -webkit-transition: 1.5s;
+    -moz-transition: 1.5s;
+    opacity: 1;
+    padding-top: 10px;
 }
 
-#menu .overlay {
+.menu-right-display {
     visibility: visible;
-    opacity: 1;
-    padding-top: 100px;
-    background: rgba(0, 0, 0, 0.5);
+    margin-left: 0px;
+}
+
+.menu-right-close {
+    visibility: visible;
+    margin-right: -20px;
+    opacity: 0;
+}
+
+.itemsmenu {
+    text-align: right;
+    padding: 0px;
+    margin-top: 20px;
+}
+
+.itemsmenu li {
+    margin-top: 20px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    display: inline;
+    padding-right: 30px;
+}
+
+.menu-item {
+    text-transform: uppercase;
+    font-family: var(--body-font);
+    font-size: var(--btn-font-size);
+}
+
+.menu {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 60px;
+    margin: 60px;
+    /* float: right; */
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.menu span {
+    margin: 0 auto;
+    position: relative;
+    top: 12px;
+}
+
+.menu span:before,
+.menu span:after {
+    position: absolute;
+    content: "";
+}
+
+.menu span,
+.menu span:before,
+.menu span:after {
+    width: 40px;
+    height: 3px;
+    background-color: var(--main-color);
+    display: block;
+}
+
+.menu span:before {
+    margin-top: -12px;
+}
+
+.menu span:after {
+    margin-top: 12px;
+}
+
+/* burger-icon */
+.burger-icon span {
+    -webkit-transition: 0.3s ease 0s;
+    transition: 0.3s ease 0s;
+}
+
+.burger-icon span:before,
+.burger-icon span:after {
+    -webkit-transition-property: margin, opacity;
+    transition-property: margin, opacity;
+    -webkit-transition-duration: 0.3s, 0s;
+    transition-duration: 0.3s, 0s;
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.burger-icon:hover span {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.burger-icon:hover span:before,
+.burger-icon:hover span:after {
+    margin-top: 0px;
+    opacity: 0;
+    -webkit-transition-delay: 0s, 0.3s;
+    transition-delay: 0s, 0.3s;
+}
+
+.menu.clickmenu span {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.menu.clickmenu span:before,
+.menu.clickmenu span:after {
+    margin-top: 0px;
+    opacity: 0;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 header .header-cta {
@@ -166,11 +226,14 @@ header .header-cta p {
     font-size: var(--logo-font-size);
 }
 
-
 /*** SECONDARY HEADER ***/
 
 header .nav {
-    background-color: var(--grey-color);
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+}
+
+header .nav h1 {
+    padding: 0 3rem;
 }
 
 /*** FOOTER ***/
@@ -231,7 +294,6 @@ footer .copyright {
 }
 
 #presentation img {
-   
     height: 450px;
 }
 
@@ -247,7 +309,7 @@ footer .copyright {
     margin: 3rem 0;
 }
 
-#presentation .presentation-text, 
+#presentation .presentation-text,
 #presentation .presentation-carousel {
     width: 35%;
 }
@@ -327,4 +389,18 @@ footer .copyright {
     color: var(--white-color);
     font-size: var(--secondary-font-size);
     text-transform: uppercase;
+}
+
+/*** CONTACT ***/
+
+.container-contact {
+    margin: 10rem 0;
+}
+
+.md-form {
+    margin: 2rem 0;
+}
+
+.fa-paper-plane {
+    padding-left: 1rem;
 }
