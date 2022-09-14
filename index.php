@@ -34,13 +34,16 @@ include('pages/bdd.php');
             include('./pages/carte.php');
         } else if ($page == 3) {
             include('./pages/header2.php');
-            include('./pages/devis');
+            include('./pages/devis.php');
         } else if ($page == 4) {
             include('./pages/header2.php');
             include('./pages/contact.php');
         } else if ($page == 5) {
             include('./pages/header2.php');
             include('./pages/connexion.php');
+        } else if ($page == 6) {
+            include('./pages/header2.php');
+            include('./pages/inscription.php');
         }
     } else {
         include('./pages/header.php');

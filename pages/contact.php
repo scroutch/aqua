@@ -1,4 +1,4 @@
-<div class="container-fluid container-contact">
+<div class="container-fluid container-form">
     <section class="mb-4">
 
     <h2 class="h1-responsive font-weight-bold text-center my-4">Nous contacter</h2>
