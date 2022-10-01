@@ -1,66 +1,24 @@
-<div class="container-fluid container-form">
-    <section class="mb-4">
-
-    <h2 class="h1-responsive font-weight-bold text-center my-4">Nous contacter</h2>
-
-    <p class="text-center w-responsive mx-auto mb-5">Vous avez une question? N'hésitez pas à nous contacter! Nous vous répondrons le plus vite possible.</p>
-
-    <div class="row">
-
-        <div class="col-md-6 mb-md-0 mb-5 mx-auto">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-
-                <div class="row">
-
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="name" name="name" class="form-control">
-                            <label for="name" class="">Nom :</label>
+<div class="container-fluid">
+    <section>
+        <div class="container py-5">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <h3>Nous contacter</h3>
+                    <form action="/target_connexion.php" method="post" id="form_connect">
+                        <div class="form_sub">
+                            <input type="text" name="name" id="" placeholder="nom">
+                            <input type="text" name="firstName" id="" placeholder="prénom">
                         </div>
-                    </div>
+                        <input type="email" name="email" id="" placeholder="email">
 
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" class="form-control">
-                            <label for="email" class="">Email :</label>
-                        </div>
-                    </div>
+                        <input type="text" name="object" id="" placeholder="Objet">
+                        <input type="textaera" name="message" id="" placeholder="Entrez votre message">
 
+
+                        <button class="button" type="submit">Envoyer<i class="fa-regular fa-paper-plane"></i></button>
+                    </form>
                 </div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control">
-                            <label for="subject" class="">Objet :</label>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="row">
-
-                    <div class="col-md-12">
-
-                        <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                            <label for="message">Votre message : </label>
-                        </div>
-
-                    </div>
-                </div>
-
-
-            </form>
-
-            <div class="text-center text-md-left">
-                <a class="button btn-contact" onclick="document.getElementById('contact-form').submit();">Send<i class="fa-regular fa-paper-plane"></i></a>
             </div>
-            <div class="status"></div>
         </div>
-
-    </div>
-
-</section>
+    </section>
 </div>

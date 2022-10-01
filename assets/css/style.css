@@ -365,7 +365,7 @@ footer .copyright {
     padding-left: 1rem;
 }
 
-/*** CONNEXION ***/
+/*** CONNEXION INSCRIPTION***/
 
 #form_connect input {
     width: 100%;
@@ -378,4 +378,18 @@ footer .copyright {
 
 #form_connect input:focus {
     border: 3px solid var(--main-color);
+}
+
+#form_connect .form_sub {
+    display: flex;
+    justify-content: space-between;
+}
+
+#form_connect .form_sub input {
+    width: 45%;
+}
+
+#form_connect p {
+    text-align: center;
+    /* margin-bottom: 5rem; */
 }
