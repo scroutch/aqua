@@ -55,7 +55,6 @@ li {
 }
 
 .button {
-    width: 100%;
     font-size: var(--btn-font-size);
     text-transform: uppercase;
     border: 2px solid var(--main-color);
@@ -367,7 +366,8 @@ footer .copyright {
 
 /*** CONNEXION INSCRIPTION***/
 
-#form_connect input {
+#form_connect input,
+#form_connect select {
     width: 100%;
     border: none;
     background-color: transparent;
@@ -376,7 +376,9 @@ footer .copyright {
     margin: 2rem 0;
 }
 
-#form_connect input:focus {
+#form_connect input:focus,
+#form_connect select:focus {
+    outline: none;
     border: 3px solid var(--main-color);
 }
 
@@ -385,11 +387,22 @@ footer .copyright {
     justify-content: space-between;
 }
 
-#form_connect .form_sub input {
+#form_connect .form_sub input,
+#form_connect .form_sub select {
     width: 45%;
 }
 
 #form_connect p {
     text-align: center;
     /* margin-bottom: 5rem; */
+}
+
+#form_connect .button {
+    width: 100%;
+}
+
+#event option,
+#presta option {
+    color: var(--black-color);
+    font-family: var(--body-font);
 }
