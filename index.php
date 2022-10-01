@@ -11,13 +11,13 @@ include('pages/bdd.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/bootstrap-5.2.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/fontawesome-free-6.2.0-web/css/all.css">
+    <link rel="stylesheet" href="./assets/fontawesome-free-6.2.0/css/all.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Moulpali&display=swap" rel="stylesheet">
-    <script defer src="./assets/fontawesome-free-6.2.0-web/js/all.js"></script>
+    <script defer src="./assets/fontawesome-free-6.2.0/js/all.js"></script>
     <title>Restaurant aqua</title>
 </head>
 

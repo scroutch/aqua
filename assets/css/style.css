@@ -14,6 +14,15 @@
 }
 
 /*** GENERICS ***/
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: var(--body-font);
     font-size: var(--main-font-size);
@@ -51,7 +60,7 @@ li {
 
 /*** HEADER ***/
 
-#header {
+header {
     width: 100vw;
     height: 1250px;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
@@ -61,23 +70,96 @@ li {
     background-size: 100%;
 }
 
-header nav {
+header .nav-toggler {
+    position: absolute;
+    z-index: 1000;
+    top: 30px;
+    right: 30px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
     display: flex;
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-    justify-content: space-between;
-    font-size: var(--title-font-size);
-    padding: 2rem 3rem;
-}
-
-header nav h1 {
-    text-transform: uppercase;
-}
-
-.itemsmenu {
-    display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    background: transparent;
+}
+
+header .nav-toggler .line {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--main-color);
+    transition: transform 0.3s ease-out, opacity 0.1s ease-out;
+}
+
+header .nav-toggler .l1 {
+    transform: translateY(-10px);
+}
+
+header .nav-toggler .l3 {
+    transform: translateY(10px);
+}
+
+header .nav-toggler.active .l1 {
+    transform: translateY(0px) rotate(135deg);
+}
+
+header .nav-toggler.active .l2 {
+    opacity: 0;
+}
+
+header .nav-toggler.active .l3 {
+    transform: translateY(0px) rotate(-135deg);
+}
+
+header nav {
+    position: fixed;
+    width: 30vw;
+    min-height: 100vh;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    border-left: 1px solid var(--main-color);
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84);
+    font-size: var(--title-font-size);
+}
+
+header nav ul.drop_down {
+    display: none;
+}
+
+header nav ul.drop_down.active {
+    display: block;
+}
+
+header nav.active {
+    transform: translate(0);
+}
+
+header nav a {
+    font-family: var(--body-font);
+    color: #f1f1f1;
+    font-size: 20px;
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: var(--main-color);
+}
+
+header h1 {
+    text-transform: uppercase;
+    padding: 2rem;
 }
 
 .itemsmenu li {
@@ -85,7 +167,7 @@ header nav h1 {
     font-weight: 600;
     padding-right: 30px;
     margin-top: 3rem;
-} 
+}
 
 .menu-item {
     text-transform: uppercase;
