@@ -19,13 +19,13 @@ if (isset($_GET['inscription'])) {
                     <h3>S'inscrire</h3>
                     <form action="./pages/target_inscription.php" method="post" id="form_connect">
                         <div class="form_sub">
-                            <input type="text" name="name" id="" placeholder="nom">
-                            <input type="text" name="firstName" id="" placeholder="prénom">
+                            <input type="text" name="name" id="" placeholder="nom" required>
+                            <input type="text" name="firstName" id="" placeholder="prénom" required>
                         </div>
-                        <input type="email" name="email" id="" placeholder="email">
+                        <input type="email" name="email" id="" placeholder="email" required>
                         <div class="form_sub">
-                            <input type="password" name="password" id="" placeholder="mot de passe">
-                            <input type="password" name="confirmPassword" id="" placeholder="confirmation du mot de passe">
+                            <input type="password" name="password" id="" placeholder="mot de passe" required>
+                            <input type="password" name="confirmPassword" id="" placeholder="confirmation du mot de passe" required>
                         </div>
 
                         <button class="button" type="submit">Valider</button>
