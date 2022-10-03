@@ -4,7 +4,7 @@
             <div class="row d-flex justify-content-center align-items-center">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                     <h3>S'inscrire</h3>
-                    <form action="/target_connexion.php" method="post" id="form_connect">
+                    <form action="./pages/target_inscription.php" method="post" id="form_connect">
                         <div class="form_sub">
                             <input type="text" name="name" id="" placeholder="nom">
                             <input type="text" name="firstName" id="" placeholder="prénom">
@@ -12,7 +12,7 @@
                         <input type="email" name="email" id="" placeholder="email">
                         <div class="form_sub">
                             <input type="password" name="password" id="" placeholder="mot de passe">
-                            <input type="password" name="password" id="" placeholder="confirmation du mot de passe">
+                            <input type="password" name="confirmPassword" id="" placeholder="confirmation du mot de passe">
                         </div>
 
                         <button class="button" type="submit">Valider</button>
