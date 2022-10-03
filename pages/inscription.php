@@ -1,3 +1,16 @@
+<?php
+
+if (isset($_GET['inscription'])) {
+    $inscription = $_GET['inscription'];
+    if ($inscription == 0) {
+        echo '  <div class="alert alert-danger" role="alert text-center">
+                    Mail ou pseudo déjà pris ! Veuillez recommencer votre inscription!
+                </div>';
+    }
+}
+
+?>
+
 <div class="container-fluid">
     <section class="form">
         <div class="container py-5">
