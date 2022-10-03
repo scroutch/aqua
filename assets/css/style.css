@@ -37,7 +37,8 @@ h2 {
     font-family: var(--title-font);
 }
 
-h3 {
+h3,
+h4 {
     text-align: center;
 }
 
@@ -404,4 +405,39 @@ footer .copyright {
 #presta option {
     color: var(--black-color);
     font-family: var(--body-font);
+}
+
+/***carte Menu ***/
+.container-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 5rem 0;
+}
+.box {
+    width: 30%;
+    height: 250px;
+    border: 2px solid var(--main-color);
+}
+
+.photo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+.photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.describe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
 }

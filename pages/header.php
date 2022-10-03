@@ -12,10 +12,16 @@
             <li class="menu-item click_drop">
                 <a href="#">Notre carte</a>
                 <ul class="drop_down">
-                    <li><a href="#">Entrées</a></li>
-                    <li><a href="#">Plats</a></li>
-                    <li><a href="#">Desserts</a></li>
-                    <li><a href="#">Boissons</a></li>
+                    <?php
+                    $queryCat = "SELECT * FROM category"; // <- categorie 
+                    $reqCat = $bdd->prepare($queryCat);
+                    $reqCat->execute();
+                    // la boucle
+                    while ($data = $reqCat->fetch()) {
+                        echo '<li><a href="index.php?page=2&category=' . $data["id_cat"] . '">' . $data["name_cat"] . '</a></li>';
+                    }
+
+                    ?>
                 </ul>
             </li>
             <li class="menu-item"><a href="index.php?page=3">Devis traiteur</a></li>

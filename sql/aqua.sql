@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 03 oct. 2022 à 07:41
+-- Généré le : lun. 03 oct. 2022 à 21:33
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -74,16 +74,16 @@ CREATE TABLE IF NOT EXISTS `allergene` (
 
 DROP TABLE IF EXISTS `category`;
 CREATE TABLE IF NOT EXISTS `category` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_cat` int(11) NOT NULL AUTO_INCREMENT,
   `name_cat` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id_cat`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `category`
 --
 
-INSERT INTO `category` (`id`, `name_cat`) VALUES
+INSERT INTO `category` (`id_cat`, `name_cat`) VALUES
 (1, 'entrées'),
 (2, 'plats'),
 (3, 'desserts'),
@@ -136,7 +136,14 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `message_contact` varchar(255) NOT NULL,
   `date_contact` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `contact`
+--
+
+INSERT INTO `contact` (`id`, `name_contact`, `first_name_contact`, `mail_contact`, `subject_contact`, `message_contact`, `date_contact`) VALUES
+(1, 'toto', 'toto', 'toto@toto.com', 'question', 'Blablablablabla', '2022-10-03 22:47:53');
 
 -- --------------------------------------------------------
 
@@ -295,10 +302,10 @@ CREATE TABLE IF NOT EXISTS `saisons` (
 
 DROP TABLE IF EXISTS `souscategory`;
 CREATE TABLE IF NOT EXISTS `souscategory` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_sousCat` int(11) NOT NULL AUTO_INCREMENT,
   `name_sousCat` varchar(255) NOT NULL,
   `category_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY (`id_sousCat`),
   KEY `fk_category_id` (`category_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
@@ -306,7 +313,7 @@ CREATE TABLE IF NOT EXISTS `souscategory` (
 -- Déchargement des données de la table `souscategory`
 --
 
-INSERT INTO `souscategory` (`id`, `name_sousCat`, `category_id`) VALUES
+INSERT INTO `souscategory` (`id_sousCat`, `name_sousCat`, `category_id`) VALUES
 (1, 'entrées froide', 1),
 (2, 'entrées chaude', 1),
 (3, 'Nos poissons', 2),
@@ -409,10 +416,16 @@ CREATE TABLE IF NOT EXISTS `user` (
   `firstName_user` varchar(75) NOT NULL,
   `mail_user` varchar(255) NOT NULL,
   `psw_user` varchar(255) NOT NULL,
-  `subscribeDate_user` date NOT NULL,
-  `tel_user` varchar(50) NOT NULL,
+  `subscribeDate_user` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `user`
+--
+
+INSERT INTO `user` (`id`, `name_user`, `firstName_user`, `mail_user`, `psw_user`, `subscribeDate_user`) VALUES
+(1, 'Maurice', 'Dupont', 'test@test.com', '$2y$10$rJW/UqtJdf7lrLj/st20tu5M/1DKiKylLJoqWYkJwzIWSy9Rkoh4i', '2022-10-03 22:34:35');
 
 --
 -- Contraintes pour les tables déchargées
@@ -474,7 +487,7 @@ ALTER TABLE `prestation_produits`
 -- Contraintes pour la table `produits`
 --
 ALTER TABLE `produits`
-  ADD CONSTRAINT `fk_sousCat_id` FOREIGN KEY (`sousCategory_id`) REFERENCES `souscategory` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_sousCat_id` FOREIGN KEY (`sousCategory_id`) REFERENCES `souscategory` (`id_sousCat`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `produits_formule`
@@ -507,7 +520,7 @@ ALTER TABLE `saisons`
 -- Contraintes pour la table `souscategory`
 --
 ALTER TABLE `souscategory`
-  ADD CONSTRAINT `fk_category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id_cat`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `status_commande`

@@ -44,6 +44,9 @@ include('pages/bdd.php');
         } else if ($page == 6) {
             include('./pages/header2.php');
             include('./pages/inscription.php');
+        } else if ($page == 7) {
+            include('./pages/header2.php');
+            include('./pages/menu.php');
         }
     } else {
         include('./pages/header.php');
