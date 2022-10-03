@@ -23,6 +23,7 @@ if (isset($_GET['inscription'])) {
                             <input type="text" name="firstName" id="" placeholder="prénom" required>
                         </div>
                         <input type="email" name="email" id="" placeholder="email" required>
+                        <input type="tel" name="tel" id="" placeholder="tel" Pattern="^9[0-9]{7}" size="10" required>
                         <div class="form_sub">
                             <input type="password" name="password" id="" placeholder="mot de passe" required>
                             <input type="password" name="confirmPassword" id="" placeholder="confirmation du mot de passe" required>

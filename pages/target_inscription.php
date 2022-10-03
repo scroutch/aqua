@@ -13,6 +13,7 @@ function sanitizeData($data)
 if ((isset($_POST['name']) && $_POST['name'] != null) &&
     (isset($_POST['firstName']) && $_POST['firstName'] != null) &&
     (isset($_POST['email']) && $_POST['email'] != null) &&
+    (isset($_POST['tel']) && $_POST['tel'] != null) &&
     (isset($_POST['password']) && $_POST['password'] != null) &&
     (isset($_POST['confirmPassword']) && $_POST['confirmPassword'] != null)
 ) {
@@ -20,6 +21,7 @@ if ((isset($_POST['name']) && $_POST['name'] != null) &&
     $name = sanitizeData($_POST['name']);
     $firstName = sanitizeData($_POST['firstName']);
     $email = sanitizeData($_POST['email']);
+    $tel = sanitizeData($_POST['tel']);
     if ($_POST['password'] === $_POST['confirmPassword']) {
         $hash = password_hash($_POST['password'], PASSWORD_BCRYPT);
     }
@@ -35,10 +37,11 @@ if ((isset($_POST['name']) && $_POST['name'] != null) &&
     } else {
 
         //requête d'insertion des données d'inscription en bdd
-        $query = 'insert into user (name_user, firstName_user, mail_user, psw_user) values (:name, :firstName, :email, :password)';
+        $query = 'insert into user (name_user, firstName_user, tel, mail_user, psw_user) values (:name, :firstName, :tel, :email, :password)';
         $req = $bdd->prepare($query);
         $req->bindValue(':name', $name, PDO::PARAM_STR);
         $req->bindValue(':firstName', $firstName, PDO::PARAM_STR);
+        $req->bindValue(':tel', $tel, PDO::PARAM_STR);
         $req->bindValue(':email', $email, PDO::PARAM_STR);
         $req->bindValue(':password', $hash, PDO::PARAM_STR);
         $req->execute();
