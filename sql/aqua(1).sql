@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 03 oct. 2022 à 21:33
+-- Généré le : lun. 03 oct. 2022 à 22:40
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -233,9 +233,9 @@ CREATE TABLE IF NOT EXISTS `produits` (
 --
 
 INSERT INTO `produits` (`id`, `name_product`, `price_product`, `img_product`, `describe_product`, `sousCategory_id`) VALUES
-(1, 'Harengs marinés pomme à l’huile', 8.9, '/assets/img/entreeF/hareng.jpg', 'Harengs marinés accompagnés de pommes à l\'huile d\'olive et au thym.', 1),
-(2, 'Caviar', 49.9, '/assets/img/entreeF/caviar.jpg', '30 grammes de caviar de France et ses brioches toastées à la crème fermière de Normandie.', 1),
-(3, 'Huîtres à l’émulsion de vodka, citron vert et piment', 19.9, '/assets/img/entreeF/Huitres.jpg', '6 belles huitres accompagnées d\'une émulsion de vodka au citron et au piment.', 1);
+(1, 'Harengs marinés pomme à l’huile', 8.9, './assets/img/entreeF/hareng.jpg', 'Harengs marinés accompagnés de pommes à l\'huile d\'olive et au thym.', 1),
+(2, 'Caviar', 49.9, './assets/img/entreeF/caviar.jpg', '30 grammes de caviar de France et ses brioches toastées à la crème fermière de Normandie.', 1),
+(3, 'Huîtres à l’émulsion de vodka, citron vert et piment', 19.9, './assets/img/entreeF/Huitres.jpg', '6 belles huitres accompagnées d\'une émulsion de vodka au citron et au piment.', 1);
 
 -- --------------------------------------------------------
 
@@ -414,18 +414,20 @@ CREATE TABLE IF NOT EXISTS `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name_user` varchar(75) NOT NULL,
   `firstName_user` varchar(75) NOT NULL,
+  `tel` varchar(25) NOT NULL,
   `mail_user` varchar(255) NOT NULL,
   `psw_user` varchar(255) NOT NULL,
   `subscribeDate_user` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`id`, `name_user`, `firstName_user`, `mail_user`, `psw_user`, `subscribeDate_user`) VALUES
-(1, 'Maurice', 'Dupont', 'test@test.com', '$2y$10$rJW/UqtJdf7lrLj/st20tu5M/1DKiKylLJoqWYkJwzIWSy9Rkoh4i', '2022-10-03 22:34:35');
+INSERT INTO `user` (`id`, `name_user`, `firstName_user`, `tel`, `mail_user`, `psw_user`, `subscribeDate_user`) VALUES
+(1, 'Maurice', 'Dupont', '', 'test@test.com', '$2y$10$rJW/UqtJdf7lrLj/st20tu5M/1DKiKylLJoqWYkJwzIWSy9Rkoh4i', '2022-10-03 22:34:35'),
+(2, 'titi', 'titi', '0602714045', 'titi@test.com', '$2y$10$9m9aV/OLSWUgZiGIn759n.uQwLfs0fptQog0yrgQk5TKIo1NWEzkC', '2022-10-04 00:19:17');
 
 --
 -- Contraintes pour les tables déchargées
