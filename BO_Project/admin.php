@@ -1,5 +1,6 @@
 <?php
 include('../pages/bdd.php'); //(chemin à adapter)
+// var_dump($_SESSION);
 ?>
 
 <!DOCTYPE html>
@@ -403,17 +404,18 @@ include('../pages/bdd.php'); //(chemin à adapter)
 			<!--                                      page content                                             -->
 			<div class="page-content">
 				<?php
-				if (isset($_SESSION['admin']) && $_SESSION['admin'] == 'ADMIN')
+				if (isset($_SESSION['admin']) && $_SESSION['admin'] == 'ADMIN') {
 					if (isset($_GET['page'])) {
 						$page = $_GET['page'];
 					} else {
 						$page = 1;
 					}
 
-				if ($page == 1) {
-					include('pages/accueil.php');
-				} elseif ($page == 2) {
-					include('pages/test.php');
+					if ($page == 1) {
+						include('pages/accueil.php');
+					} elseif ($page == 2) {
+						include('pages/test.php');
+					}
 				} else {
 					$_SESSION['message'] = '<div class="alert alert-danger text-center" role="alert"><i class="fa-solid fa-triangle-exclamation me-3"></i>Vous n\'avez pas les droits pour accéder à cette zone</div>';
 					// redirection vers le site (chemin à adapter)
