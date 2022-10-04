@@ -46,19 +46,37 @@ include('../pages/bdd.php'); //(chemin à adapter)
 				<ul class="nav">
 					<li class="nav-item nav-category">Général</li>
 					<li class="nav-item">
-						<a href="admin.php?page=1" class="nav-link">
+						<a href="admin.php?page=2" class="nav-link">
 							<i class="link-icon" data-feather="box"></i>
-							<span class="link-title">Accueil</span>
+							<span class="link-title">Catégories</span>
 						</a>
 					</li>
-					<li class="nav-item nav-category">web apps</li>
+					<li class="nav-item">
+						<a href="admin.php?page=3" class="nav-link">
+							<i class="link-icon" data-feather="box"></i>
+							<span class="link-title">Sous catégories</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="admin.php?page=4" class="nav-link">
+							<i class="link-icon" data-feather="box"></i>
+							<span class="link-title">Produits</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="admin.php?page=5" class="nav-link">
+							<i class="link-icon" data-feather="box"></i>
+							<span class="link-title">Users</span>
+						</a>
+					</li>
+					<!-- <li class="nav-item nav-category">web apps</li>
 					<li class="nav-item">
 						<a href="admin.php?page=2" class="nav-link">
 							<i class="link-icon" data-feather="message-square"></i>
 							<span class="link-title">Test</span>
 						</a>
-					</li>
-					<li class="nav-item">
+					</li> -->
+					<!--<li class="nav-item">
 						<a href="admin.php?page=2" class="nav-link">
 							<i class="link-icon" data-feather="message-square"></i>
 							<span class="link-title">Read</span>
@@ -81,7 +99,7 @@ include('../pages/bdd.php'); //(chemin à adapter)
 							<i class="link-icon" data-feather="calendar"></i>
 							<span class="link-title">Calendar</span>
 						</a>
-					</li>
+					</li> -->
 					<!-- <li class="nav-item nav-category">Components</li>
 					<li class="nav-item">
 						<a class="nav-link" data-toggle="collapse" href="#uiComponents" role="button" aria-expanded="false" aria-controls="uiComponents">
@@ -200,11 +218,11 @@ include('../pages/bdd.php'); //(chemin à adapter)
 					<!-- </ul>
 			</div>
 			</li> -->
-					<li class="nav-item nav-category">Pages</li>
+					<!-- <li class="nav-item nav-category">Pages</li>
 					<li class="nav-item">
 						<a class="nav-link" data-toggle="collapse" href="#general-pages" role="button" aria-expanded="false" aria-controls="general-pages">
 							<i class="link-icon" data-feather="book"></i>
-							<span class="link-title">Special pages</span>
+							<span class="link-title"></span>
 							<i class="link-arrow" data-feather="chevron-down"></i>
 						</a>
 						<div class="collapse" id="general-pages">
@@ -239,7 +257,7 @@ include('../pages/bdd.php'); //(chemin à adapter)
 						</div>
 					</li>
 				</ul>
-			</div>
+			</div> -->
 		</nav>
 		<!-- fin left navbar -->
 
@@ -414,7 +432,13 @@ include('../pages/bdd.php'); //(chemin à adapter)
 					if ($page == 1) {
 						include('pages/accueil.php');
 					} elseif ($page == 2) {
-						include('pages/test.php');
+						include('pages/categorie.php');
+					} elseif ($page == 3) {
+						include('pages/sousCat.php');
+					} elseif ($page == 4) {
+						include('pages/produits.php');
+					} elseif ($page == 5) {
+						include('pages/user.php');
 					}
 				} else {
 					$_SESSION['message'] = '<div class="alert alert-danger text-center" role="alert"><i class="fa-solid fa-triangle-exclamation me-3"></i>Vous n\'avez pas les droits pour accéder à cette zone</div>';
