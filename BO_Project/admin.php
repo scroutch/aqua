@@ -4,7 +4,7 @@ include('../pages/bdd.php'); //(chemin à adapter)
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
 	<meta charset="UTF-8">
@@ -82,7 +82,7 @@ include('../pages/bdd.php'); //(chemin à adapter)
 							<span class="link-title">Calendar</span>
 						</a>
 					</li>
-					<li class="nav-item nav-category">Components</li>
+					<!-- <li class="nav-item nav-category">Components</li>
 					<li class="nav-item">
 						<a class="nav-link" data-toggle="collapse" href="#uiComponents" role="button" aria-expanded="false" aria-controls="uiComponents">
 							<i class="link-icon" data-feather="feather"></i>
@@ -196,10 +196,10 @@ include('../pages/bdd.php'); //(chemin à adapter)
 								</li>
 								<li class="nav-item">
 									<a href="" class="nav-link">Mdi Icons</a>
-								</li>
-							</ul>
-						</div>
-					</li>
+								</li> -->
+					<!-- </ul>
+			</div>
+			</li> -->
 					<li class="nav-item nav-category">Pages</li>
 					<li class="nav-item">
 						<a class="nav-link" data-toggle="collapse" href="#general-pages" role="button" aria-expanded="false" aria-controls="general-pages">
